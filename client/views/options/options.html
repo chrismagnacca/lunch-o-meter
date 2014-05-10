@@ -1,11 +1,14 @@
 <template name="options">
   <div class="row">
     <div class="col-md-4"></div>
-    <div id="meal-options" class="col-md-4">
-      <ul class="list-group">
+    <div class="col-md-4">
+      <ul class="meal-options list-group">
         {{ #each options }}
-          <li class="list-group-item" id="{{ _id }}">
-            {{ name }} <span class="remove-option glyphicon glyphicon-remove"></span>
+          <li class="meal-option list-group-item" id="{{ _id }}">
+            <span class="up-vote glyphicon glyphicon-arrow-up"></span>
+            <span class="down-vote glyphicon glyphicon-arrow-down"></span>
+            <span class="meal-option-name">{{ name }}</span>
+            <span class="remove-option glyphicon glyphicon-remove"></span>
           </li>
         {{ /each }}
       </ul>

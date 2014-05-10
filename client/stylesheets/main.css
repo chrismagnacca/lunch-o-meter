@@ -21,6 +21,35 @@
 }
 
 /* meal options */
+.up-vote, .down-vote {
+  float: left;
+}
+
+.up-vote:hover {
+  color: #47A447;
+}
+
+.down-vote:hover {
+  color: #F0AD4E;
+}
+
+.meal-options {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.meal-option-name {
+  margin-left: -1.563em;
+}
+
+.meal-option span {
+  margin-top: 0.188em;
+}
+
 .remove-option {
   float: right;
+}
+
+.remove-option:hover {
+  color: #D9534F;
 }
