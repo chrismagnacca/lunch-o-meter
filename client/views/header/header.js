@@ -9,7 +9,7 @@ Template.header.rendered = function () {
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: ''
         },
         tooltip: {
     	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

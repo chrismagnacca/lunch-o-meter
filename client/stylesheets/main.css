@@ -19,3 +19,8 @@
 #navbar {
   margin-top: 1.0em;
 }
+
+/* meal options */
+.remove-option {
+  float: right;
+}

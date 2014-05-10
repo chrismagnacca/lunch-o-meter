@@ -1,0 +1,15 @@
+<template name="options">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div id="meal-options" class="col-md-4">
+      <ul class="list-group">
+        {{ #each options }}
+          <li class="list-group-item" id="{{ _id }}">
+            {{ name }} <span class="remove-option glyphicon glyphicon-remove"></span>
+          </li>
+        {{ /each }}
+      </ul>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</template>

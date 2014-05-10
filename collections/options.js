@@ -1,1 +1,1 @@
-Options = new Meteor.Collection('options');
+Options = new Meteor.Collection("options");
