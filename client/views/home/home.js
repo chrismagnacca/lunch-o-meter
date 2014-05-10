@@ -2,7 +2,7 @@ Template.home.events({
   "submit": function(e) {
     e.preventDefault();
     var input = $("input#option-to-add");
-    Options.insert({ name: input.val() });
+    Options.insert({ name: input.val(), votes: 1 });
     input.val("");
   },
 

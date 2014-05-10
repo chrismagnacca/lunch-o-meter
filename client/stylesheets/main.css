@@ -1,3 +1,8 @@
+/*bootstrap overrides */
+.list-group-item .badge {
+  float: none !important; 
+}
+
 /* center bootstrap nav-pills */
 .centered-pills { text-align:center; }
 .centered-pills ul.nav-pills { display:inline-block; }
