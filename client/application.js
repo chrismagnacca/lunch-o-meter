@@ -1,25 +1,29 @@
-Router.map(function() {
-  this.route('home', {path: '/'})
+Router.configure({
+  layout: "layout",
+  loadingTemplate: "loading"
 });
 
-if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to lunch-o-meter.";
-  };
-
-  Template.hello.events({
-    'click input': function () {
-      // template data, if any, is available in 'this'
-      if (typeof console !== 'undefined')
-        console.log("You pressed the button");
+Router.map(function() {
+  this.route("home", {
+    path: "/",
+    data: {
+      options: function() {
+        return Options.find({});
+      },
+      votes: function () {
+        return Votes.find({});
+      }
     }
   });
-}
+  this.route("options");
+  this.route("votes");
+});
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-
-
-  });
-}
+App = {
+  Subscriptions: {
+    options: Meteor.subscribe("options"),
+    option: Meteor.subscribe("option"),
+    votes: Meteor.subscribe("votes"),
+    vote: Meteor.subscribe("vote")
+  }
+};
