@@ -1,5 +1,10 @@
 <template name="home">
+  {{>nav}}
+
   <h1>Hello World!</h1>
-  {{ greeting }}
-  <input type="button" value="Click" />
+  {{ #each options }}
+    <div>{{ title }}</div>
+  {{ /each }}
+
+  {{>footer}}
 </template>
