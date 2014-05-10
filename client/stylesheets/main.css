@@ -1,0 +1,21 @@
+/* center bootstrap nav-pills */
+.centered-pills { text-align:center; }
+.centered-pills ul.nav-pills { display:inline-block; }
+.centered-pills li { display:inline; }
+.centered-pills a { float:left; }
+* html .centered-pills ul.nav-pills { display:inline; } /* IE6 */
+*+html .centered-pills ul.nav-pills { display:inline; } /* IE7 */
+
+/* highcharts */
+#highchart {
+  padding: 2.0em;
+  height: 30.0em;
+  min-width: 30.0em;
+  max-width: 60.0em;
+  margin: 0 auto;
+}
+
+/* nav */
+#navbar {
+  margin-top: 1.0em;
+}
