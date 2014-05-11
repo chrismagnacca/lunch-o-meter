@@ -94,8 +94,9 @@ A: Have you ever tried figuring out where to go for lunch with a large group of 
 In no particular order:
 
 1. Add OAuth for Twitter API 1.1 Integration
-2. Limit Votes per User
-3. Store the Top Result by Day
+2. Make Highcharts a Custom Publication to Update Across all Clients
+3. Limit Votes per User
+4. Store the Top Result by Day
 
 
 ## Contributing
