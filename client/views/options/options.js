@@ -5,7 +5,9 @@ Template.options.events({
   },
 
   "click .down-vote": function(e){
-    Options.update(this._id, {$inc: {votes: -1}});
+    if(Options.findOne(this._id).votes > 1)
+      Options.update(this._id, {$inc: {votes: -1}});
+
     Meteor.Helpers.UpdateSeriesData();
   }
 });

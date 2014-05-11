@@ -1,4 +1,4 @@
-## Lunch-O-Meter
+## Lunch-O-Mete(o)r
 
 Built With & On
 * [MeteorJS](https://www.meteor.com)
@@ -99,11 +99,10 @@ In no particular order:
 
 
 ## Contributing
-To contribute, 
+To contribute,
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
