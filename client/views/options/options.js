@@ -10,4 +10,4 @@ Template.options.events({
 
 Template.options.options = function() {
   return Options.find({}, {sort: [["votes", "desc"], ["name", "asc"]]});
-}
+};
