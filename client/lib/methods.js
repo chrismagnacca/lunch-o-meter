@@ -1,6 +1,10 @@
-Meteor.Helpers = Meteor.Helpers || {};
+Meteor.methods({
 
-Meteor.Helpers.UpdateSeriesData = function() {
+  PieChart: function() {
+    return Highcharts.charts[0];
+  },
+
+  UpdateSeriesData: function() {
     var seriesData = [];
     var options = Options.find({});
 
@@ -8,6 +12,8 @@ Meteor.Helpers.UpdateSeriesData = function() {
       var dataPoint = [option.name, option.votes];
       seriesData.push(dataPoint);
     });
+    
+    Meteor.call("PieChart").series[0].setData(seriesData, true);
+  }
 
-    pChart.series[0].setData(seriesData, true);
-};
+});

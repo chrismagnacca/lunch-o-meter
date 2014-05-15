@@ -1,14 +1,11 @@
 Template.options.events({
   "click .up-vote": function(e) {
     Options.update(this._id, {$inc: {votes: 1}});
-    Meteor.Helpers.UpdateSeriesData();
   },
 
   "click .down-vote": function(e){
-    if(Options.findOne(this._id).votes > 1)
+    if(Options.findOne(this._id).votes > 0)
       Options.update(this._id, {$inc: {votes: -1}});
-
-    Meteor.Helpers.UpdateSeriesData();
   }
 });
 
