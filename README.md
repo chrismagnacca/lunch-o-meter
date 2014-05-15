@@ -95,7 +95,7 @@ In no particular order:
 1. Add OAuth for Twitter API 1.1 Integration
 2. Limit Votes per User
 3. Store the Top Result by Day
-
+4. Push the Series Calculation to the Server
 
 ## Contributing
 To contribute,
