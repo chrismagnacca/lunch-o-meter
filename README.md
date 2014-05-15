@@ -16,8 +16,7 @@ Meteor Packages
 lunch-o-meter/
 ├── client             # <- client specific libraries
 │   ├── config         # <- client specific configuration (Router.configure({...}), etc)
-│   ├── helpers        # <- handlebars & meteor helpers
-│   ├── lib            # <- client specific libraries
+│   ├── lib            # <- client specific libraries & methods
 │   ├── routes         # <- controller/route definitions & mappings
 │   ├── startup        # <- client startup setup (Meteor.isClient is assumed by convention)
 │   ├── stylesheets    # <- css files for the handlebars views
