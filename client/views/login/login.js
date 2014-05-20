@@ -5,9 +5,7 @@ Template.login.events({
     var email = t.find('#login-email').value
     var password = t.find('#login-password').value;
 
-    email = Meteor.call("Trim", email);
-
-    if(Meteor.call("IsValidPassword", password))
+    if(typeof(password) != "undefined")
       Meteor.loginWithPassword(email, password, function(error) {
         if (error) {
           // user login has failed due to bad password or email
