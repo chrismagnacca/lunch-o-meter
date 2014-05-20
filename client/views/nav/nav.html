@@ -1,14 +1,16 @@
 <template name="nav">
   <div class="row">
     <div class="col-md-12 centered-pills">
-      {{> login }}
-      {{> register }}
       <nav id="navbar" role="navigation">
         <ul class="nav nav-pills">
-          <li><a href="#">{{ yesterday }}</a></li>
-          <li class="active"><a href="#">{{ today }}</a></li>
-          <li><a href="#">{{ tomorrow }}</a></li>
-        </ul>
+        {{ #if currentUser}}
+          <li id="yesterday-item"><a href="#" id="date-yesterday">{{ yesterday }}</a></li>
+          <li id="today-item" class="active"><a href="#" id="date-today">{{ today }}</a></li>
+          <li id="tomorrow-item"><a href="#" id="date-tomorrow">{{ tomorrow }}</a></li>
+        {{ else }}
+          <li id="sign-in-item"><a href="#" id="sign-in">Sign In</a></li>
+        {{ /if }}
+      </ul>
       </nav>
     </div>
   </div>
