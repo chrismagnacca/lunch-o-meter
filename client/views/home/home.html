@@ -1,4 +1,4 @@
-<template name="header">
+<template name="highchart">
   <div class="row">
     <div class="col-md-12">
       <div id="highchart">
@@ -8,13 +8,35 @@
 </template>
 
 <template name="home">
-  {{> header }}
 
-  {{> options }}
+  <input type="checkbox" id="nav-handler">
+  <nav id="nav">
+    <ul class="list-unstyled">
+      <li id="yesterday-item"><a href="#" id="date-yesterday">{{ yesterday }} </a></li>
+      <li id="today-item" class="active"><a href="#" id="date-today">{{ today }}</a></li>
+      <li id="tomorrow-item"><a href="#" id="date-tomorrow">{{ tomorrow }}</a></li>
+    </ul>
+  </nav>
 
-  {{> form }}
+  <main id="main-container">
+    <header id="header">
+      {{ #if currentUser }}
+        <label id="menu-button" for="nav-handler">☰</label>
+      {{ else }}
+        <label id="sign-in-item"><a href="#" id="sign-in">Sign In</a></label>
+      {{ /if }}
+    </header>
 
-  {{> footer}}
+    <section id="content-container">
+      {{> highchart }}
+
+      {{> options }}
+
+      {{> form }}
+
+      {{> footer}}
+    </section>
+  </main>
 </template>
 
 <template name="footer">

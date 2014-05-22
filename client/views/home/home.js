@@ -60,3 +60,30 @@ Template.home.rendered = function() {
 
   var chart = new Highcharts.Chart(chartOptions);
 };
+
+Template.home.helpers({
+  yesterday: function() {
+    var yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    return yesterday.toString().substring(0,15)
+  },
+
+  today: function() {
+    return new Date().toString().substring(0,15);
+  },
+
+  tomorrow: function() {
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toString().substring(0,15);
+  },
+
+  currentUser: function() {
+    return false;
+  }
+});
+
+Template.register.events({
+  'a#sign-in click': function(e, t) {
+  }
+});
