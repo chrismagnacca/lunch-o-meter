@@ -92,10 +92,12 @@ A: Have you ever tried figuring out where to go for lunch with a large group of 
 ## Upcomming Additions
 In no particular order:
 
-1. Add OAuth for Twitter API 1.1 Integration
-2. Limit Votes per User
-3. Store the Top Result by Day
-4. Push the Series Calculation to the Server
+1. Limit Votes per User
+2. Store the Top Result by Day
+3. Push the Series Calculation to the Server
+
+## In-Progress Additions
+1. Custom Accounts Handeling
 
 ## Contributing
 To contribute,
