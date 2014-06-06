@@ -141,7 +141,6 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 75px 0 0 0;
-	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	background: #fff;
 	z-index: -1;
