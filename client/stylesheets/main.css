@@ -19,6 +19,16 @@ body {
   font-family: sans-serif;
 }
 
+.flash, .flash-modal {
+  display: none;
+  border-radius: 0.313em;
+}
+
+.form-row {
+  padding-top: 0.313em;
+  padding-bottom: 0.313em;
+}
+
 /* meal options */
 .up-vote, .down-vote {
   float: left;
