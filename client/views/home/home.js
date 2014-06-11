@@ -76,10 +76,6 @@ Template.home.helpers({
     var tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toString().substring(0,15);
-  },
-
-  currentUser: function() {
-    return false;
   }
 });
 
