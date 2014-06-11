@@ -1,5 +1,5 @@
 Template.home.events({
-  "submit": function(e) {
+  "submit form#new-option": function(e) {
     e.preventDefault();
     var input = $("input#option-to-add");
     Options.insert({ name: input.val(), votes: 0 });
