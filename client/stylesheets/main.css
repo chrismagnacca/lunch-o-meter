@@ -19,6 +19,14 @@ body {
   font-family: sans-serif;
 }
 
+div#sign-in-item {
+  text-align: center;
+}
+
+button#sign-in {
+  margin-top: 0.313em;
+}
+
 .flash, .flash-modal {
   display: none;
   border-radius: 0.313em;
