@@ -1,19 +1,33 @@
-<template name="register">
-  <form id="register-form" action="action">
-    <div class="row">
-      <div class="col-md-2">
-        <input class="form-control" type="email" placeholder="Email" id="account-email" />
+<template name="register_modal">
+<div class="modal fade" id="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Register</h4>
       </div>
+      <form id="login-form" action="action">
+        {{> registerBody }}
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" id="create-account">Register</button>
+        </div>
+      </form>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <input class="form-control" type="password" placeholder="Password" id="account-password" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <input class="btn btn-primary" type="submit" id="create-account" value="Create an Account" />
-      </div>
-    </div>
-  </form>
+  </div>
+</div>
+</template>
+
+<template name="registerBody">
+<div class="modal-body">
+  <div class="row form-row flash flash-modal">
+    <div class="col-md-12" id="message"></div>
+  </div>
+  <div class="row form-row">
+    <input class="form-control" type="email" placeholder="Email" id="account-email" />
+  </div>
+  <div class="row form-row">
+    <input class="form-control" type="password" placeholder="Password" id="account-password" />
+  </div>
+</div>
 </template>
