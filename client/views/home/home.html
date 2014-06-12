@@ -23,7 +23,9 @@
       {{ #if currentUser }}
         <label id="menu-button" for="nav-handler">☰</label>
       {{ else }}
-        <label id="sign-in-item"><a href="" data-toggle="modal" data-target="#modal" id="sign-in">Sign In</a></label>
+      <div id="sign-in-item">
+        <button class="btn btn-default" data-toggle="modal" data-target="#modal" id="sign-in">Sign In</button>
+      </div>
       {{ /if }}
     </header>
 
