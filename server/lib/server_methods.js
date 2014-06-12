@@ -1,4 +1,6 @@
 Meteor.methods({
+  Archive: function() {
 
-
+  }
 });
+

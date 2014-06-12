@@ -1,5 +1,4 @@
 Meteor.methods({
-
   PieChart: function() {
     return Highcharts.charts[0];
   },
