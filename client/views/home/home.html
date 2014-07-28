@@ -24,7 +24,21 @@
         <label id="menu-button" for="nav-handler">☰</label>
       {{ else }}
       <div id="sign-in-item">
-        <button class="btn btn-default" data-toggle="modal" data-target="#modal" id="sign-in">Sign In</button>
+        <div id="sign-in-items">
+            {{#if currentUser}}
+              <a href="/account/{{currentUser.username}}" id="accounts"><img src="{{gravatar}}" class="circular" /></a>
+              <br />
+              <a href="" id="logout">logout</a>
+            {{else}}
+              <button class="btn btn-default" data-toggle="modal" data-target="#login" id="sign-in">
+                Sign In
+              </button>
+              <br />
+              <a href="" data-toggle="modal" data-target="#register" id="sign-in">
+                Not Registered? Sign Up!
+              </a>
+            {{/if}}
+          </div>
       </div>
       {{ /if }}
     </header>

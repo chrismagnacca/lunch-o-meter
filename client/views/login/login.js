@@ -1,25 +1,17 @@
 Template.login.events({
   'submit form#login-form' : function(e, t){
     e.preventDefault();
-    var $flash = $("div.flash");
-    $flash.hide();
-    var email = t.find('#login-email').value
-    var password = t.find('#login-password').value;
-
-    if(typeof(password) != "undefined")
-      Meteor.loginWithPassword(email, password, function(error) {
+    $("div.flash").hide();
+    var credentials = { email: $('#login-email').val(), password: $('#login-password').val() };
+    if(typeof(credentials.password) != "undefined")
+      Meteor.loginWithPassword(credentials.email, credentials.password, function(error) {
         if (error) {
-          // user login has failed due to bad password or email
-          var $msg = $("div#message");
-          var message = "Sorry, ".concat(error.reason);
-
-          $msg.text(message);
-          $flash.css("background", "#F2DEDE");
-          $flash.toggle();
+          $("div#message").text("Sorry, ".concat(error.reason));
+          $("div.flash").css("background", "#F2DEDE");
+          $("div.flash").toggle();
         } else {
-          // user has been logged in.
-          $flash.hide();
-          $("#modal").modal("hide");
+          $("div.flash").hide();
+          $("#login").modal("hide");
         }
       });
     else

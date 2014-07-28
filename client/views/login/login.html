@@ -1,33 +1,29 @@
 <template name="login">
-<div class="modal fade" id="modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Sign In</h4>
-      </div>
-      <form id="login-form" action="action">
-        {{> loginBody }}
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Login</button>
+  <div class="modal fade" id="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Sign In</h4>
         </div>
-      </form>
+        <form id="login-form" action="action">
+          <div class="modal-body">
+            <div class="row form-row flash flash-modal">
+              <div class="col-md-12" id="message"></div>
+            </div>
+            <div class="row form-row">
+              <input class="form-control" type="email" placeholder="Email" id="login-email" />
+            </div>
+            <div class="row form-row">
+              <input class="form-control" type="password" placeholder="Password" id="login-password" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-</template>
-
-<template name="loginBody">
-<div class="modal-body">
-  <div class="row form-row flash flash-modal">
-    <div class="col-md-12" id="message"></div>
-  </div>
-  <div class="row form-row">
-    <input class="form-control" type="email" placeholder="Email" id="login-email" />
-  </div>
-  <div class="row form-row">
-    <input class="form-control" type="password" placeholder="Password" id="login-password" />
-  </div>
-</div>
 </template>
