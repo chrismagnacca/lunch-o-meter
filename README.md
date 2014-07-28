@@ -7,6 +7,7 @@ Built With & On
 
 Meteor Packages
 * [IronRouter](https://atmospherejs.com/package/iron-router)
+* [Cron](http://atmospherejs.com/package/cron)
 
 ***
 
@@ -94,10 +95,6 @@ In no particular order:
 
 1. Limit Votes per User
 2. Store the Top Result by Day
-3. Push the Series Calculation to the Server
-
-## In-Progress Additions
-1. Custom Accounts Handeling
 
 ## Contributing
 To contribute,
