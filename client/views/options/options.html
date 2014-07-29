@@ -16,10 +16,14 @@
 
 <template name="option">
   <li class="meal-option list-group-item" id="{{ _id }}">
+    {{ #if currentUser }}
     <span class="up-vote glyphicon glyphicon-arrow-up"></span>
     <span class="down-vote glyphicon glyphicon-arrow-down"></span>
+    {{ /if }}
     <span class="meal-option-name">{{ name }}</span>
     <span class="badge">{{ votes }}</span>
+    {{ #if currentUser }}
     <span class="remove-option glyphicon glyphicon-remove"></span>
+    {{ /if }}
   </li>
 </template>
