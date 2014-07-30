@@ -71,6 +71,12 @@ button#sign-in {
   color: #D9534F;
 }
 
+.circular {
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+
 /* hide nav handler toggle checkbox */
 #nav-handler {
   display: none;

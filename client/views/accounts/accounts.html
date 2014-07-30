@@ -1,0 +1,17 @@
+<template name="accounts">
+	<section id="accounts-container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+					<div class="row form-row">
+					{{#if isEditing }}
+					{{else}}
+						<label class="form-control" type="username" placeholder="Username" id="account-username" >{{ user.username }}</label>
+						<label class="form-control" type="username" placeholder="Username" id="account-username" >{{ user.email }}</label>
+					{{/if}}
+					</div>
+				</div>
+			<div class="col-md-4"></div>
+		</div>
+	</section>
+</template>

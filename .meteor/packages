@@ -9,3 +9,4 @@ iron-router
 accounts-base
 accounts-password
 cron
+gravatar

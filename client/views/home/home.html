@@ -22,6 +22,14 @@
     <header id="header">
       {{ #if currentUser }}
         <label id="menu-button" for="nav-handler">☰</label>
+        
+        <div id="sign-in-item">
+          <div id="sign-in-items">
+            <a href="/account/{{currentUser.username}}" id="accounts"><img src="{{gravatar}}" class="circular" /></a>
+            <br />
+            <a href="" id="logout">logout</a>
+          </div>
+        </div>
       {{ else }}
       <div id="sign-in-item">
         <div id="sign-in-items">
@@ -44,6 +52,7 @@
     </header>
 
     <section id="content-container">
+      <br />
       {{> highchart }}
 
       {{> options }}

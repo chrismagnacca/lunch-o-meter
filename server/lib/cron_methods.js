@@ -10,6 +10,14 @@
 
 var Archive = function() {
   console.log("cron tasks!");
+  // store current day data series & reset options data for next day
+  // var seriesData = [];
+  // var options = Options.find({});
+  //
+  // options.forEach(function(option) {
+  //   var dataPoint = [option.name, option.votes];
+  //   seriesData.push(dataPoint);
+  // });
 }
 
 var Cron = new Meteor.Cron({
@@ -17,5 +25,3 @@ var Cron = new Meteor.Cron({
     "0 0 * * *" : Archive
   }
 });
-
-

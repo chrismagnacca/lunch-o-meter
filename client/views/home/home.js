@@ -9,7 +9,12 @@ Template.home.events({
   "click .remove-option": function(e) {
     var id = $(e.target).closest("li").prop("id");
     Options.remove({_id: id});
-  }
+  },
+
+	"click a#logout" : function(e,t){
+		e.preventDefault();
+		Meteor.logout();
+	}
 });
 
 Template.home.rendered = function() {
@@ -62,6 +67,10 @@ Template.home.rendered = function() {
 };
 
 Template.home.helpers({
+  gravatar: function() {
+      return Gravatar.imageUrl(Meteor.user().emails[0].address);
+    },
+
   yesterday: function() {
     var yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
@@ -76,10 +85,5 @@ Template.home.helpers({
     var tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toString().substring(0,15);
-  }
-});
-
-Template.register.events({
-  'a#sign-in click': function(e, t) {
   }
 });
