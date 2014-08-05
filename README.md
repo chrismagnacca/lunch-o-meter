@@ -94,7 +94,6 @@ A: Have you ever tried figuring out where to go for lunch with a large group of 
 In no particular order:
 
 1. Limit Votes per User
-2. Store the Top Result by Day
 
 ## Contributing
 To contribute,
