@@ -17,9 +17,9 @@ var archive = function() {
 		seriesData.push(dataPoint);
 	});
 
-	var currentTime = new Date()
+	var currentTime = new Date();
 	Archives.insert({ series: seriesData, date: currentTime });
-}
+};
 
 var Cron = new Meteor.Cron({
 	events: {

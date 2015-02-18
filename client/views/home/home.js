@@ -61,7 +61,7 @@ Template.home.rendered = function() {
         name: 'Lunch Options',
         data: seriesData
     }]
-  }
+  };
 
   var chart = new Highcharts.Chart(chartOptions);
 };
@@ -74,7 +74,7 @@ Template.home.helpers({
   yesterday: function() {
     var yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
-    return yesterday.toString().substring(0,15)
+    return yesterday.toString().substring(0,15);
   },
 
   today: function() {
