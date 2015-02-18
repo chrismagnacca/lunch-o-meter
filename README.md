@@ -6,8 +6,9 @@ Built With & On
 * [HighCharts](http://www.highcharts.com/)
 
 Meteor Packages
-* [IronRouter](https://atmospherejs.com/package/iron-router)
-* [Cron](http://atmospherejs.com/package/cron)
+* [IronRouter](https://atmospherejs.com/iron/router)
+* [Cron](https://atmospherejs.com/mrt/cron)
+* [Gravatar](https://atmospherejs.com/tmeasday/gravatar)
 
 ***
 
@@ -47,15 +48,10 @@ Install Meteor if it is not already been installed.
 $ curl https://install.meteor.com | /bin/sh
 ```
 
-Install Meteorite if it is not already installed.
+Run the project using Meteor, port 3000 will be the default port unless otherwise specified by the -p flag.
 ```
-$ npm install -g meteorite
-```
-
-Run the project using Meteorite, port 3000 will be the default port unless otherwise specified by the -p flag.
-```
-$ mrt
-Stand back while Meteorite does its thing
+$ meteor
+Stand back while Meteor does its thing
 
 Done installing smart packages
 
