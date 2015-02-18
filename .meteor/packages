@@ -5,8 +5,8 @@
 
 standard-app-packages
 insecure
-iron-router
 accounts-base
 accounts-password
-cron
-gravatar
+mrt:cron@0.0.1
+tmeasday:gravatar@0.0.4
+iron:router
