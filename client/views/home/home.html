@@ -9,20 +9,9 @@
 
 <template name="home">
 
-  <input type="checkbox" id="nav-handler">
-  <nav id="nav">
-    <ul class="list-unstyled">
-      <li id="yesterday-item"><a href="#" id="date-yesterday">{{ yesterday }} </a></li>
-      <li id="today-item" class="active"><a href="#" id="date-today">{{ today }}</a></li>
-      <li id="tomorrow-item"><a href="#" id="date-tomorrow">{{ tomorrow }}</a></li>
-    </ul>
-  </nav>
-
   <main id="main-container">
     <header id="header">
       {{ #if currentUser }}
-        <label id="menu-button" for="nav-handler">☰</label>
-        
         <div id="sign-in-item">
           <div id="sign-in-items">
             <a href="/account/{{currentUser.username}}" id="accounts"><img src="{{gravatar}}" class="circular" /></a>

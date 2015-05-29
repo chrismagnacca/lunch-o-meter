@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-      <ul class="meal-options list-group">
+      <ul class="options list-group">
         {{ #each options }}
           {{> option }}
         {{ else }}
-          <li class="meal-option list-group-item">No Lunch Options Provided!</li>
+          <li class="option list-group-item">No Options Provided!</li>
         {{ /each }}
       </ul>
     </div>
@@ -15,12 +15,12 @@
 </template>
 
 <template name="option">
-  <li class="meal-option list-group-item" id="{{ _id }}">
+  <li class="option list-group-item" id="{{ _id }}">
     {{ #if currentUser }}
     <span class="up-vote glyphicon glyphicon-arrow-up"></span>
     <span class="down-vote glyphicon glyphicon-arrow-down"></span>
     {{ /if }}
-    <span class="meal-option-name">{{ name }}</span>
+    <span class="option-name">{{ name }}</span>
     <span class="badge">{{ votes }}</span>
     {{ #if currentUser }}
     <span class="remove-option glyphicon glyphicon-remove"></span>

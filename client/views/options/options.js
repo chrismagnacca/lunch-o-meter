@@ -1,6 +1,10 @@
 Template.options.events({
   "click .up-vote": function(e) {
     Options.update(this._id, {$inc: {votes: 1}});
+    var user = Meteor.user();
+    /**
+     * update the fact that the user has voted for an option
+     */
   },
 
   "click .down-vote": function(e){

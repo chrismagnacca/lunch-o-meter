@@ -9,12 +9,11 @@
 
 html, body {
   height: 100%;
-  background: #CCC;
+  background: #FFFFFF;
 }
 
 body {
   position: relative;
-  overflow: hidden;
   font-size: 16px;
   font-family: sans-serif;
 }
@@ -50,16 +49,16 @@ button#sign-in {
   color: #F0AD4E;
 }
 
-.meal-options {
+.options {
   font-size: 1.2em;
   text-align: center;
 }
 
-.meal-option-name {
+.option-name {
   margin-left: -1.563em;
 }
 
-.meal-option span {
+.option span {
   margin-top: 0.188em;
 }
 
@@ -72,100 +71,8 @@ button#sign-in {
 }
 
 .circular {
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
 }
 
-/* hide nav handler toggle checkbox */
-#nav-handler {
-  display: none;
-}
-
-#header {
-  position: static;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75px;
-  z-index: 2;
-}
-
-#menu-button {
-  display: inline-block;
-  float: left;
-  line-height: 2.5;
-  cursor: pointer;
-  padding-left: 0.750em;
-  font-size: 2.0em;
-}
-
-#nav-handler:checked ~ #menu-button {
-  color: #08C;
-}
-
-#nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 15%;
-  height: 100%;
-  z-index: 1;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  transition: opacity 0s .25s;
-  -moz-transition: opacity 0s .25s;
-  background-image: linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
-}
-
-#nav-handler:checked ~ #nav {
-  opacity: 1;
-  transition: opacity 0s 0s;
-  -moz-transition: opacity 0s 0s;
-  -webkit-transition: opacity 0s 0s;
-}
-
-#nav ul li {
-  display: block;
-  clear: both;
-}
-
-#nav ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  font-size: 1.25em;
-  color: #000000;
-}
-
-#main-container {
-  display: block;
-  position: relative;
-  height: 100%;
-  transform: translate3D(0,0,0);
-  -moz-transform: translate3D(0,0,0);
-  -webkit-transform: translate3D(0,0,0);
-  transition: -moz-transform .25s ease-in-out;
-  -moz-transition: -moz-transform .25s ease-in-out;
-  -webkit-transition: -webkit-transform .25s ease-in-out;
-  z-index: 5;
-}
-
-#nav-handler:checked ~ #main-container {
-  transform: translate3D(15%,0,0); /* x value must be same as nav width */
-  -moz-transform: translate3D(15%,0,0); /* x value must be same as nav width */
-  -webkit-transform: translate3D(15%,0,0); /* x value must be same as Nav width */
-}
-
-#content-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 75px 0 0 0;
-  -webkit-overflow-scrolling: touch;
-  background: #fff;
-  z-index: -1;
-}
