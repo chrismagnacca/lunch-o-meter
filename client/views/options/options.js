@@ -1,10 +1,25 @@
 Template.options.events({
   "click .up-vote": function(e) {
     Options.update(this._id, {$inc: {votes: 1}});
+    
     var user = Meteor.user();
-    /**
-     * update the fact that the user has voted for an option
-     */
+
+    var voteOptions = { 
+      voted: true,
+      option: this._id,
+      userId: Meteor.userId()
+    };
+
+    var vote = Votes.find(voteOptions).fetch();
+
+
+    if(vote.length === 0) {
+      debugger;
+      Votes.insert(voteOptions);
+    } else {
+      debugger;
+      Votes.update({ _id: vote._id },{ $set: voteOptions });
+    }
   },
 
   "click .down-vote": function(e){
